@@ -9,5 +9,14 @@ const starts =()=>{
 };
 task.on("greet",starts);
 task.on("greet",sayHi); //Event and method binding 
-task.emit("greet","Aniket Kumar") // Announcementc
-
+task.on("greet" ,(name)=>{
+    console.log(`${name} starts shopping`);
+} 
+);
+task.on("greet" ,(name)=>{
+    console.log(`${name} logged out`);
+} 
+);
+task.emit("greet","Akhilesh ji");// Announcement
+task.emit("greet","Akii jii");
+task.emit("greet","Akii jii");
