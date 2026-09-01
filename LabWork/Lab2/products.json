@@ -1,0 +1,14 @@
+[
+  {
+    "id": 110,
+    "name": "laptop",
+    "price": 45999,
+    "qty": 8
+  },
+  {
+    "id": 120,
+    "name": "S26 ULTRA",
+    "price": 96000,
+    "qty": 3
+  }
+]
