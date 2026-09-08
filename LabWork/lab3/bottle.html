@@ -1,0 +1,290 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HydroMax Water Bottle</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f2f8ff;
+            color: #222;
+        }
+
+        header {
+            background: #0077b6;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 50px 8%;
+            gap: 40px;
+        }
+
+        .hero-text {
+            max-width: 500px;
+        }
+
+        .hero-text h2 {
+            font-size: 48px;
+            color: #023e8a;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        .price {
+            font-size: 30px;
+            font-weight: bold;
+            color: #0077b6;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #0077b6;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #023e8a;
+        }
+
+        .bottle {
+            width: 220px;
+            height: 420px;
+            background: linear-gradient(to right, #90e0ef, #0077b6, #90e0ef);
+            border-radius: 45px 45px 35px 35px;
+            position: relative;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .cap {
+            width: 90px;
+            height: 60px;
+            background: #023e8a;
+            position: absolute;
+            top: -45px;
+            left: 65px;
+            border-radius: 15px 15px 5px 5px;
+        }
+
+        .label {
+            position: absolute;
+            top: 150px;
+            left: 15px;
+            width: 190px;
+            background: white;
+            color: #0077b6;
+            padding: 25px 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 22px;
+            border-radius: 8px;
+        }
+
+        .features {
+            background: white;
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .features h2 {
+            color: #023e8a;
+            margin-bottom: 35px;
+            font-size: 32px;
+        }
+
+        .feature-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            width: 230px;
+            padding: 25px;
+            border-radius: 12px;
+            background: #f2f8ff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .feature h3 {
+            color: #0077b6;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        footer {
+            background: #023e8a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text h2 {
+                font-size: 38px;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>HydroMax</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#buy">Buy Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+            <h2>Stay Fresh.<br>Stay Hydrated.</h2>
+
+            <p>
+                Meet HydroMax, a stylish and durable water bottle
+                designed for your everyday lifestyle. Perfect for
+                college, gym, office and travel.
+            </p>
+
+            <div class="price">₹499</div>
+
+            <button class="btn" onclick="buyBottle()">
+                Buy Now
+            </button>
+        </div>
+
+        <!-- Bottle Design -->
+        <div class="bottle">
+            <div class="cap"></div>
+
+            <div class="label">
+                HYDROMAX
+                <br>
+                1 L
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+
+        <h2>Why Choose HydroMax?</h2>
+
+        <div class="feature-container">
+
+            <div class="feature">
+                <h3>💧 1 Liter Capacity</h3>
+                <p>
+                    Carry enough water to stay hydrated
+                    throughout your day.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>🛡️ BPA Free</h3>
+                <p>
+                    Made from high-quality BPA-free material
+                    for safe everyday use.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>❄️ Keeps Water Cool</h3>
+                <p>
+                    Designed to keep your drinks cool
+                    for longer.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>🎒 Easy to Carry</h3>
+                <p>
+                    Lightweight and perfect for college,
+                    gym and travelling.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer id="buy">
+        <p>© 2026 HydroMax. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function buyBottle() {
+            alert("Thank you for choosing HydroMax! Your order has been started.");
+        }
+    </script>
+
+</body>
+</html>
+```

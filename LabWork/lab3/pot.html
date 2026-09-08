@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mitticool Indian Pot</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fff8f0;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: #8b4513;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 60px 8%;
+            gap: 50px;
+        }
+
+        .hero-text {
+            max-width: 550px;
+        }
+
+        .hero-text h2 {
+            font-size: 48px;
+            color: #7b3f00;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .price {
+            font-size: 30px;
+            font-weight: bold;
+            color: #a0522d;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: #a0522d;
+            color: white;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #7b3f00;
+        }
+
+        /* Pot Design */
+        .pot {
+            width: 300px;
+            height: 250px;
+            background: linear-gradient(
+                to right,
+                #8b4513,
+                #cd853f,
+                #a0522d
+            );
+            border-radius: 30px 30px 100px 100px;
+            position: relative;
+            box-shadow: 0 20px 30px rgba(0,0,0,0.25);
+        }
+
+        .pot::before {
+            content: "";
+            position: absolute;
+            width: 270px;
+            height: 55px;
+            background: #6f3600;
+            border-radius: 50%;
+            top: -20px;
+            left: 15px;
+        }
+
+        .pot::after {
+            content: "INDIAN POT";
+            position: absolute;
+            top: 90px;
+            left: 45px;
+            width: 210px;
+            padding: 18px 0;
+            background: #fff3df;
+            color: #7b3f00;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        /* Features */
+        .features {
+            background: white;
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 34px;
+            color: #7b3f00;
+            margin-bottom: 40px;
+        }
+
+        .feature-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            width: 230px;
+            padding: 30px 20px;
+            background: #fff8f0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .feature h3 {
+            color: #a0522d;
+            margin-bottom: 12px;
+        }
+
+        .feature p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            background: #7b3f00;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text h2 {
+                font-size: 38px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .pot {
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <h1>Mitticool</h1>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="#features">Features</a>
+            <a href="#buy">Buy Now</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h2>
+                Traditional.<br>
+                Natural. Beautiful.
+            </h2>
+
+            <p>
+                Discover the beauty of traditional Indian pottery.
+                Our natural clay pot is perfect for storing water,
+                decorating your home and bringing an authentic
+                Indian touch to your lifestyle.
+            </p>
+
+            <div class="price">
+                ₹799
+            </div>
+
+            <button class="btn" onclick="buyPot()">
+                Buy Now
+            </button>
+
+        </div>
+
+
+        <!-- Pot -->
+        <div class="pot"></div>
+
+    </section>
+
+
+    <!-- Features -->
+    <section class="features" id="features">
+
+        <h2>Why Choose Our Indian Pot?</h2>
+
+        <div class="feature-container">
+
+            <div class="feature">
+                <h3>🏺 Natural Clay</h3>
+                <p>
+                    Made from natural clay using traditional
+                    pottery techniques.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>💧 Natural Cooling</h3>
+                <p>
+                    Clay naturally helps keep stored water
+                    cool and refreshing.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>🌱 Eco Friendly</h3>
+                <p>
+                    An environmentally friendly alternative
+                    to plastic containers.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>🇮🇳 Indian Craft</h3>
+                <p>
+                    Inspired by India's traditional pottery
+                    and craftsmanship.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="buy">
+
+        <p>
+            © 2026 Mitticool | Traditional Indian Pottery
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        function buyPot() {
+            alert("Thank you for choosing our Indian Pot! Your order has been started.");
+        }
+
+    </script>
+
+</body>
+</html>
