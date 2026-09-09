@@ -42,3 +42,33 @@ every request from client has a pair of { request ,response}
        1. res.writehread
        2.res.setheader
        3.statuscode
+       
+## response html content
+1. res.writeHead
+2. res.setHeader
+3. res.statusCode
+
+## send html file to client
+1. html file
+ -read html file using createReadStress
+ _pipe it with res object
+
+2. html content
+   send any html tags/content by using 
+   res.end('<any html tag>)
+
+   ## JSON(JAVA SCRIPT OBJECT NOTATION)
+   server returns data only not html contents because html contents will by content devloper.
+   The data is in json format.
+   JSON- Always stores data in key value pairs enclosed by {}.\
+   Array can be stored by [].
+   one pair of {} will represent one object and its property will be seperated by , .
+    ```
+   {
+    id:1,
+    name-'Mobile',
+    price:25000,
+    rating:4.5,
+    review:200
+   }
+   ```
